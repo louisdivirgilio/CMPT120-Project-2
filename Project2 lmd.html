@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+   
+   <!-- Project 2 by Louis DiVirgilio 
+      Introduction to Programing- Project 2
+      September 25, 2012-->
+      
+   <head>
+      
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <meta name="author" content="Web Page" />
+    
+    <title>Totally Original Text Adventure Game</title>
+      
+      <style>
+      		body {background-color:black;}
+      		body {color: white}
+      		
+      </style>
+      
+    	<script type="text/JavaScript">
+        
+		 var score = 0;
+         var a = 1;
+         var b = 1;
+         var c = 1;
+         var d = 1;
+         
+         
+         
+         function btn_direction_click(btnNum) {
+            
+            if (btnNum === 1) {
+               var msg = "You arrive on shore and find this island has an abundance of coconuts and other items that can help you like empty containers to catch water.";
+               updateText(msg);
+               
+            	if (a === 1) {
+            	a++;
+            	score = (score + 5);   
+               }
+               
+            } else {
+               if (btnNum === 2) {
+                 var msg = "This island has a variety of weapons and things to use in hunting as well as a diverse animal population.";
+                 updateText(msg);   
+                 	
+                 	if (b === 1) {
+                 	b++;
+                 	score = (score + 5); 
+                 	}
+                 	              
+               } else {
+                  if (btnNum === 3) {
+                  	var msg = "This island has an abundance of trees that can be used as rafts and shelter."
+                  	updateText(msg);
+                  		
+                  		if (c === 1) {
+                  		c++;
+                  		score = (score + 5);
+                  		}
+                  		
+                  		} else {
+                  			if (btnNum === 4) {
+                  				var msg = "Upon arrival on this island you are immediately attacked by a large predator and jump back into the water as this is your only option."
+                  				updateText(msg);
+                  					
+                  					if (d === 1) {
+                  					d++;
+                  					score = (score + 5);
+                  					}
+                  					
+                  				} else {
+                  					if (btnNum === 5) {
+                  					alert ("You have " + score + " points.");
+						}
+					}              
+				}            
+			}
+		}
+	}
+          function updateText(msg){
+           var ta = document.getElementById("taGame");
+           ta.value = msg + "\n" + ta.value;
+         } 
+
+      </script>
+  
+  </head>
+  <body>
+      This is my totally original adventure game, "Island".
+      <br>
+      
+      <textarea id="taGame" rows="15" cols="90">You wake up floating on a piece of driftwood. You soon realize you are the only one left, your boat has been wrecked by last nights storm. You look all around and see four small islands around you. Which direction should you swim...
+      </textarea>
+      
+      <br>
+      
+      <input type="button"
+             value="North"
+             onclick="btn_direction_click(1);">
+
+      <input type="button"
+             value="South"
+             onclick="btn_direction_click(2);">
+		
+	  <input type="button"
+             value="East"
+             onclick="btn_direction_click(3);">
+    
+      <input type="button"
+             value="West"
+             onclick="btn_direction_click(4);">	
+             
+ 	  <input type="button"
+ 	  		 value="Score"
+ 	  		 onclick="btn_direction_click(5);">
+ 	  		  
+ 	  <p class="bottom">
+      	<a href=mailto:loumdivirgilio@gmail.com>E-mail Link</a>
+      </p> 
+      	<a href="http://validator.w3.org/#validate_by_input">Validate</a>
+ 
+
+  </body>
+</html>
