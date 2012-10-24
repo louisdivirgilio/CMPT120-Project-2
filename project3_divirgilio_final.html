@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html>
+	
+	<!-- Project 3 by Louis DiVirgilio 
+      Introduction to Programing- Project 3
+      October 24, 2012-->
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="author" content="Louis DiVirgilio" />
+		<title>Totally Original Text Adventure Game</title>
+		<style>
+			body {background-color: black;}
+			body {color : white;}
+		</style>
+	</head>
+	
+	<body background="game BG.jpg">
+		
+		<h1>Totally Original Text Adventure Game...</h1>
+		
+		<script type = "text/Javascript">
+					
+			
+			var currentlocation = 2  
+			
+			//room scores
+			var roomscore0 = 0;
+			var roomscore1 = 0;
+			var roomscore2 = 0;
+			var roomscore3 = 0;
+			var roomscore4 = 0;
+			var roomscore5 = 0;
+
+			//the total score 
+			var score = 0;
+
+			
+			function btn_north_click() {
+				if (currentlocation === 5 ) {
+					currentlocation = 4;
+
+					var msg = "You go toward the door to your south and find that it is one of the home's bedrooms. The bedroom is furnished nicely but looks as if nobody has been in it for a long, long time. It has a bed, two end tables, and a dresser. To the south end of the bedroom there is a door slightly agar...";
+					updatetext (msg);
+
+					if (roomscore4 === 0) {
+						roomscore4++;
+						score = (score + 5)
+					}
+
+					document.getElementById("idNorth").style.visibility="visible";
+            		document.getElementById("idEast").style.visibility="hidden";
+            		document.getElementById("idWest").style.visibility="hidden";
+            		document.getElementById("idSouth").style.visibility="visible";
+					
+					} else {
+				if (currentlocation === 4 ) {
+					currentlocation = 2;
+
+					var msg = "You wake up in the fourier of a large, old house you have never been in before. You are dazed and do not remember at all how you could have possibly ended up where you presently are. You begin to observe your surroundings to all sides of you. There is a dark staircase to the north, a cracked door to two rooms to the East and South, and a locked door to the west. Where's the key...?" ;
+					updatetext (msg);
+
+					if (roomscore2 === 0) {
+						roomscore2++;
+						score = (score + 5)
+					}
+
+					document.getElementById("idNorth").style.visibility="visible";
+            		document.getElementById("idEast").style.visibility="visible";
+            		document.getElementById("idWest").style.visibility="visible";
+            		document.getElementById("idSouth").style.visibility="visible";
+
+					} else {
+				if (currentlocation === 2 ) {
+					currentlocation = 0;
+
+					var msg = "There is a long staircase leading to the basement of the old house. At this moment you feel you should not go any further because it is too dark down there and you can't see anything.";
+					updatetext (msg);
+
+					if (roomscore0 === 0) {
+						roomscore0++;
+						score = (score + 5)
+					}
+
+					document.getElementById("idNorth").style.visibility="hidden";
+            		document.getElementById("idEast").style.visibility="hidden";
+            		document.getElementById("idWest").style.visibility="hidden";
+            		document.getElementById("idSouth").style.visibility="visible";
+
+					} else {
+				if (currentlocation === 0 ) {
+					alert("Can't go North anymore :(");
+								}
+							}
+						}
+					}
+				}		
+				
+			function btn_east_click() {		
+				if (currentlocation === 1 ) {
+					currentlocation = 2;
+
+					var msg = "You wake up in the fourier of a large, old house you have never been in before. You are dazed and do not remember at all how you could have possibly ended up where you presently are. You begin to observe your surroundings to all sides of you. There is a dark staircase to the north, a cracked door to two rooms to the East and South, and a locked door to the west. Where's the key...?" ;
+					updatetext (msg);
+
+					if (roomscore2 === 0) {
+						roomscore2++;
+						score = (score + 5)
+					}
+
+					document.getElementById("idNorth").style.visibility="visible";
+            		document.getElementById("idEast").style.visibility="visible";
+            		document.getElementById("idWest").style.visibility="visible";
+            		document.getElementById("idSouth").style.visibility="visible";
+
+					} else {
+				if (currentlocation === 2 ) {
+					currentlocation = 3;
+
+					var msg = "You see a door slightly agar. You  open it and find it to be the house's bathroom. You find various items: a dirty plunger...ew, a screwdriver, flashlight with no batteries...could be usefull?,and a long cord.";
+					updatetext (msg);
+
+					if (roomscore3 === 0) {
+						roomscore3++;
+						score = (score + 5)
+					}
+
+					document.getElementById("idNorth").style.visibility="hidden";
+            		document.getElementById("idEast").style.visibility="hidden";
+            		document.getElementById("idWest").style.visibility="visible";
+            		document.getElementById("idSouth").style.visibility="hidden";
+
+					} else {
+				if (currentlocation === 3 ) {
+					alert("No, you can't go further east...");
+							}
+						}
+					}	
+				}
+							
+			function btn_south_click() {					
+				if (currentlocation === 0 ) {
+					currentlocation = 2;
+
+					var msg = "You wake up in the fourier of a large, old house you have never been in before. You are dazed and do not remember at all how you could have possibly ended up where you presently are. You begin to observe your surroundings to all sides of you. There is a dark staircase to the north, a cracked door to two rooms to the East and South, and a locked door to the west. Where's the key...?" ;
+					updatetext (msg);
+
+					if (roomscore2 === 0) {
+						roomscore2++;
+						score = (score + 5)
+					}
+
+					document.getElementById("idNorth").style.visibility="visible";
+            		document.getElementById("idEast").style.visibility="visible";
+            		document.getElementById("idWest").style.visibility="visible";
+            		document.getElementById("idSouth").style.visibility="visible";
+
+					} else {
+				if (currentlocation === 2 ) {
+					currentlocation = 4;
+
+					var msg = "You go toward the door to your south and find that it is one of the home's bedrooms. The bedroom is furnished nicely but looks as if nobody has been in it for a long, long time. It has a bed, two end tables, and a dresser. To the south end of the bedroom there is a door slightly agar...";
+					updatetext (msg);
+
+					if (roomscore4 === 0) {
+						roomscore4++;
+						score = (score + 5)
+					}
+
+					document.getElementById("idNorth").style.visibility="visible";
+            		document.getElementById("idEast").style.visibility="hidden";
+            		document.getElementById("idWest").style.visibility="hidden";
+            		document.getElementById("idSouth").style.visibility="visible";
+					
+					} else {
+				if (currentlocation === 4 ) {
+					currentlocation = 5;
+
+					var msg = "You proceed through the door that was left slightly agar. It is in fact a walk in closet. It contains batteries, random old clothes, and pictures of an old man and his family left on top of a mysterious box.";
+					updatetext (msg);
+
+					if (roomscore5 === 0) {
+						roomscore5++;
+						score = (score + 5)
+					}
+
+					document.getElementById("idNorth").style.visibility="visible";
+            		document.getElementById("idEast").style.visibility="hidden";
+            		document.getElementById("idWest").style.visibility="hidden";
+            		document.getElementById("idSouth").style.visibility="hidden";
+
+					} else {
+				if (currentlocation === 5 ) {
+					alert("Seriously? You can't go South anymore.");
+								} 
+							}
+						}
+					}
+				}
+				
+			function btn_west_click() {							
+				if (currentlocation === 3 ) {
+					currentlocation = 2;
+
+					var msg = "You wake up in the fourier of a large, old house you have never been in before. You are dazed and do not remember at all how you could have possibly ended up where you presently are. You begin to observe your surroundings to all sides of you. There is a dark staircase to the north, a cracked door to two rooms to the East and South, and a locked door to the west. Where's the key...?" ;
+					updatetext (msg);
+
+					if (roomscore2 === 0) {
+						roomscore2++;
+						score = (score + 5)
+					}
+
+					document.getElementById("idNorth").style.visibility="visible";
+            		document.getElementById("idEast").style.visibility="visible";
+            		document.getElementById("idWest").style.visibility="visible";
+            		document.getElementById("idSouth").style.visibility="visible";
+
+					} else {
+				if (currentlocation === 2 ) {
+					currentlocation = 1;
+
+
+					var msg = "You look toward the door to the west. It is seemingly the frond door to the house and your only way towards freedom. However, it is locked twice and boarded up. How can you open it???";
+					updatetext (msg);
+
+					if (roomscore1 === 0) {
+						roomscore1++;
+						score = (score + 5)
+					}
+
+					document.getElementById("idNorth").style.visibility="hidden";
+            		document.getElementById("idEast").style.visibility="visible";
+            		document.getElementById("idWest").style.visibility="hidden";
+            		document.getElementById("idSouth").style.visibility="hidden";
+
+					} else {
+				if (currentlocation === 1 ) {
+					alert("The door is clearly locked... You can't go futher west anymore.");
+							}
+						}
+					}
+				}
+				
+			function btn_score_click() {
+				alert("You have " + score + " points.");
+					}						
+							
+
+			function updatetext(directionmsg) {
+				directionmsg = directionmsg + "[ " + currentlocation + " ]"
+				var textadd = document.getElementById("textarea1");
+				textadd.value = directionmsg + "\n" + textadd.value;
+			}
+				
+			function btn_enter_click() {
+				var userinput = document.getElementById("txtcommand");
+				
+				if (userinput.value === ("N")) {
+                  btn_north_click();                
+               }else if (userinput.value === ("n")){ 
+                  btn_north_click();
+               }else if (userinput.value === ("E")){
+                  btn_east_click();
+               }else if (userinput.value === ("e")){ 
+                  btn_east_click();                       
+               }else if (userinput.value === ("S")){
+                  btn_south_click();
+               }else if (userinput.value === ("s")){ 
+                  btn_south_click();  
+               }else if (userinput.value === ("W")){
+                  btn_west_click();
+               }else if (userinput.value === ("w")){ 
+                  btn_west_click();               
+               }else{
+                updatetext ("Valid commands are \"n\", \"e\", \"s\", \"w\"");                   
+              		}
+              	}			
+
+
+		</script>
+		
+		E-mail: <a href="mailto:louis.divirgilio1@marist.edu">Louis DiVirgilio</a> 
+		
+		<br>
+		<br>
+		
+		<textarea rows="15" cols="100" id="textarea1">You wake up in the fourier of a large, old house you have never been in before. You are dazed and do not remember at all how you could have possibly ended up where you presently are. You begin to observe your surroundings to all sides of you. There is a dark staircase to the north, a cracked door to two rooms to the East and South, and a locked door to the west. Where's the key...?
+		</textarea>
+		
+		<br>
+		
+		<input type="button"
+				value="Go North"
+				onclick="btn_north_click();"
+				id="idNorth">
+
+		<input type="button"
+				value="Go East"
+				onclick="btn_east_click();"
+				id="idEast">	
+		
+		<input type="button"
+				value="Go South"
+				onclick="btn_south_click();"
+				id="idSouth">
+		
+		<input type="button"
+				value="Go West"
+				onclick="btn_west_click();"
+				id="idWest">
+		
+		<br> 
+		<br> 
+
+		<input type="text"
+				id="txtcommand"
+				value="">
+		
+		<input type="button"
+				value="Enter"
+				onclick="btn_enter_click();"> 
+		
+		<br>
+		<br> 
+
+		<input type="button"
+				value="Current Score"
+				onclick="btn_score_click();">
+	</body>
+</html>
+	
