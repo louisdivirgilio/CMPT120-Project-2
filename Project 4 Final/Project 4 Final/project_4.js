@@ -4,7 +4,7 @@ var Eastscore = 1;
 var Southscore = 1;
 var Westscore = 1;          
 var currentlocation = "start";
-var flashlight = false;
+var backpack = false;
 
 function btn_North_click () { 
           
@@ -125,8 +125,8 @@ function Take (){
           
           switch (currentlocation) {
                 case "NORTH2":  
-                    if (flashlight === false) {
-                    flashlight = true;
+                    if (backpack === false) {
+                    backpack = true;
                     UpdateText ("You have a working flashlight in your inventory.")     
                     } else {
               }
@@ -319,7 +319,7 @@ function btn_go_click(){
           }
 
 function Inventory(){
-          if (flashlight === true){
+          if (backpack === true){
           UpdateText("You have a working flashlight in your inventory.");
           }else{ 
           UpdateText ("Nothing is in your inventory.");

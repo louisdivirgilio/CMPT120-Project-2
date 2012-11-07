@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <!-- Louis DiVirgilio
+         Introduction to Programming 
+         Project 4 - November 7, 2012-->
+    
+    <head>
+        
+        <meta http-equiv="content-Type" content="text/html; charset=utf-8"/>
+        
+        <title> Totally Original Text Adventure Game I Came Up With </title>
+        
+        <script type= "text/JavaScript" src= "project_4.js"> </script>
+     
+        <link rel="stylesheet" type="text/css" href="project_4.css" />          
+
+    </head>    
+    
+    <body>    
+        
+        <p class="text">Totally Original Text Adventure Game...
+        </p>
+         
+        <p class="text">
+              Email: <a href = "mailto:Louis.DiVirgilio1@marist.edu"> Louis.DiVirgilio1@marist.edu</a> 
+        </p>
+      
+        <p>
+          <img src = "shittyMap.jpg" width = "300" height = "400" 
+             alt = "Poorly Drawn Map">
+        </p>    
+        
+        <textarea id= "taGame" rows= "8" cols= "70" > 
+        </textarea>
+      
+       
+       <BODY onload="Start()"> 
+      
+       <br>
+
+       <br>
+
+        <input type    = "button"
+               value   = "Move North"
+               onclick = "btn_North_click();"
+               id      = "idNorth">
+               
+        <input type    = "button"
+               value   = "Move East"
+               onclick = "btn_East_click();"
+               id      = "idEast">
+              
+        <input type    = "button"
+               value   = "Move South"
+               onclick = "btn_South_click();"
+               id      = "idSouth">
+               
+        <input type    = "button"
+               value   = "Move West"
+               onclick = "btn_West_click();"
+               id      = "idWest">
+             
+        <input type    = "button"
+               value   = "Click for Score"
+               onclick = "btn_Score_click();">
+=          
+        <p class= "text"> Type a command
+        <input type = "text" 
+               id   = "txtcommand">
+        
+        <input type    = "button" 
+               value   = "Go"
+               onclick = "btn_go_click();">
+
+    </body>
+</html>    
