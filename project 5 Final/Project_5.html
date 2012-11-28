@@ -17,7 +17,7 @@
 
     </head>    
     
-    <body onload="btn_move_click(0)">    
+    <body>    
         
         <p class="text">Totally Original Text Adventure Game...
         </p>
@@ -27,7 +27,7 @@
         </p>
       
         <p>
-          <img src = "gameMap.jpg" width = "300" height = "400" 
+          <img src = "shittyMap.jpg" width = "300" height = "400" 
              alt = "Poorly Drawn Map">
         </p>    
         
@@ -35,6 +35,7 @@
         </textarea>
       
        
+       <BODY onload="Start()"> 
       
        <br>
 
@@ -42,36 +43,35 @@
 
         <input type    = "button"
                value   = "Move North"
-               onclick = "btn_move_click(0);"
+               onclick = "btn_North_click();"
                id      = "idNorth">
                
         <input type    = "button"
                value   = "Move East"
-               onclick = "btn_move_click(1);"
+               onclick = "btn_East_click();"
                id      = "idEast">
               
         <input type    = "button"
                value   = "Move South"
-               onclick = "btn_move_click(2);"
+               onclick = "btn_South_click();"
                id      = "idSouth">
                
         <input type    = "button"
                value   = "Move West"
-               onclick = "btn_move_click(3);"
+               onclick = "btn_West_click();"
                id      = "idWest">
              
         <input type    = "button"
                value   = "Click for Score"
-               onclick = "btn_score_click();">
-
+               onclick = "btn_Score_click();">
+=          
         <p class= "text"> Type a command
-        
         <input type = "text" 
                id   = "txtcommand">
         
         <input type    = "button" 
                value   = "Go"
-               onclick = "btn_enter_click();">
+               onclick = "btn_go_click();">
 
     </body>
 </html>    
