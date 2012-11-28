@@ -62,7 +62,7 @@
 	function take_item() {
 
 		item_flashlight = new proto_item(0, "Flashlight", "Your run of the mill, everyday flashlight.");
-		item_lock_box = new proto_item(1, "Lock Box", "Lock box that may contain a mysterious item.");
+		item_lock_box   = new proto_item(1, "Lock Box", "Lock box that may contain a mysterious item.");
 		item_batteries 	= new proto_item(2, "Batteries", "These batteries fit into the flashlight so you can see.");
 		item_key 	    = new proto_item(3, "Key", "This is golden key that could open anything...");
 
