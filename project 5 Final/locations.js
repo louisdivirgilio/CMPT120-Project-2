@@ -31,7 +31,11 @@
 	var locationArray = new Array();
 
 	var inventoryArray = new Array();
-
+	
+	var doyouhave_flashlight = false
+	var doyouhave_lock_box = false
+	var doyouhave_batteries= false
+	var doyouhave_key= false
 
 	//the total score from the toggles
 	var score = 0;
@@ -72,21 +76,38 @@
 					inventoryArray[0] = item_flashlight
 					updatetext ("Your inventory now contains the Flashlight.")
 					
+					if (doyouhave_flashlight === false) {
+						doyouhave_flashlight = true
+						}else{
+							updatetext ("You already have the flashlight in your inventory.")
+							}
 					break;
 			case 9:
 					inventoryArray[3] = item_key
 					updatetext ("Your inventory now contains the Key.")
-					
+					if (doyouhave_key === false) {
+						doyouhave_key = true
+						}else{
+							updatetext ("You already have the key in your inventory.")
+							}
 					break;
 			case 8:
 					inventoryArray[2] = item_batteries
 					updatetext ("Your inventory now contains Batteries.")
-					
+					if (doyouhave_batteries === false) {
+						doyouhave_batteries = true
+						}else{
+							updatetext ("You already have the batteries in your inventory.")
+							}
 					break;
 			case 7:
 					inventoryArray[1] = item_lock_box
 					updatetext ("Your inventory now contains the Lock Box.")
-					
+					if (doyouhave_lock_box === false) {
+						doyouhave_lock_box = true
+						}else{
+							updatetext ("You already have the lock box in your inventory.")
+							}
 					break;
 			}
 		}
@@ -151,15 +172,27 @@
 		movecount = movecount + 1
 		direction = direction
 		var newlocation = nav[currentlocation][direction];
+		
+		if (newlocation === 2 && doyouhave_flashlight === true && doyouhave_lock_box === true && doyouhave_batteries === true && doyouhave_key === true){
+			updatetext("Congrats you won!!")
+			
+			document.getElementById("idNorth").style.visibility="hidden";
+			document.getElementById("idEast").style.visibility="hidden";
+	    	document.getElementById("idWest").style.visibility="hidden";
+	    	document.getElementById("idSouth").style.visibility="hidden";
+		    document.getElementById("idbtngo").style.visibility="hidden";
+		    }else{
+		
+		
 		if (newlocation !== -1) {
 			currentlocation = newlocation;
 			VisablityScore(newlocation)
 			creating_locations();
 			updatetext(locationArray[currentlocation]);
 		} else { updatetext("you can't go this way.")}
-
+		
 	}
-
+}
 
 
 	function VisablityScore(newlocation) {
